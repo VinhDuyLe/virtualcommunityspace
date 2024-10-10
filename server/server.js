@@ -24,8 +24,6 @@ else if (process.env.NODE_ENV === 'production') {
     app.use(express.static('public'))
 }
 
-// specify the api path for the server to use
-// Use the routes
 app.use('/api', eventsRoutes);
 app.use('/api', locationsRoutes);
 

@@ -10,14 +10,12 @@ const LocationEvents = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-
     const fetchLocationEvents = async () => {
       try {
-        const eventsData = await EventsAPI.getEventsByLocation(venueId);
+        const eventsData = await EventsAPI.getEventsByLocation(encodeURIComponent(venueId));
         if (eventsData.length > 0) {
           setLocation({
             name: eventsData[0].location,
-            
             image: '/path/to/default/image.jpg',
           });
           setEvents(eventsData);
@@ -36,12 +34,10 @@ const LocationEvents = () => {
         <div className='location-image'>
           <img src={location.image} alt={location.name} />
         </div>
-
         <div className='location-info'>
           <h2>{location.name}</h2>
         </div>
       </header>
-
       <main>
         {events.length > 0 ? (
           events.map((event) => (

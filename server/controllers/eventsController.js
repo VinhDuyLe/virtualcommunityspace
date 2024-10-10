@@ -1,6 +1,5 @@
 import { pool } from '../config/database.js';
 
-// Get all events
 export const getAllEvents = async (req, res) => {
   try {
     const result = await pool.query('SELECT * FROM events');

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import EventsAPI from '../services/EventsAPI'; // Ensure this is correct
-import Event from './Event'; // Ensure this is correct
+import EventsAPI from '../services/EventsAPI'; 
+import Event from './Event'; 
 
 const Events = () => {
   const [events, setEvents] = useState([]);
@@ -9,10 +9,10 @@ const Events = () => {
     const fetchEvents = async () => {
       try {
         const data = await EventsAPI.getAllEvents(); // Fetch all events from API
-        console.log('Fetched events:', data); // Log fetched data
-        setEvents(data); // Update state with event data
+        console.log('Fetched events:', data); 
+        setEvents(data); 
       } catch (error) {
-        console.error('Error fetching events:', error); // Log any errors
+        console.error('Error fetching events:', error); 
       }
     };
     fetchEvents();
@@ -26,12 +26,15 @@ const Events = () => {
           {events.map((event) => (
             <Event
               key={event.id}
-              id={event.id}
               title={event.title}
               date={event.date}
               time={event.time}
               image={event.image}
-              remaining={event.remaining}
+              remaining={
+                event.remaining
+                  ? `${event.remaining.days || 0} days, ${event.remaining.hours || 0} hours`
+                  : 'No remaining time available'
+              }
             />
           ))}
         </ul>

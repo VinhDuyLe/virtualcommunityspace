@@ -1,10 +1,46 @@
 .available-locations {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-left: 50px;
     margin-right: 50px;
 }
 
+.location-header {
+    margin-bottom: 20px;
+}
+
+.location-header h2 {
+    font-size: 24px;
+    color: #333; /* Darker text for better contrast */
+    font-weight: bold;
+}
+
+.locations-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+.location-item {
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.location-item:hover {
+    background-color: #333;
+    color: #fff; /* Invert colors on hover */
+}
+
+/* Keep the existing SVG and button styles as they are */
 svg {
     position: absolute;
     top: -1px;
@@ -21,30 +57,25 @@ svg polygon:hover {
     fill: rgba(55, 216, 232, 0.2);
 }
 
-.venue1-button-overlay {
-    opacity: 0;
-    z-index: 10;
-    position: relative;
-    top: 15%;
-    left: -5%;
-}
-
-.venue2-button-overlay {
-    opacity: 0;
-    z-index: 10;
-}
-
-.venue3-button-overlay {
-    opacity: 0;
-    z-index: 10;
-    position: relative;
-    left: 30%;
-}
-
+.venue1-button-overlay,
+.venue2-button-overlay,
+.venue3-button-overlay,
 .venue4-button-overlay {
     opacity: 0;
     z-index: 10;
     position: relative;
+}
+
+.venue1-button-overlay {
+    top: 15%;
+    left: -5%;
+}
+
+.venue3-button-overlay {
+    left: 30%;
+}
+
+.venue4-button-overlay {
     top: 20%;
     left: -5%;
 }

@@ -1,6 +1,5 @@
 import { pool } from '../config/database.js';
 
-// Get all locations
 export const getAllLocations = async (req, res) => {
   try {
     const result = await pool.query('SELECT DISTINCT location FROM events');
