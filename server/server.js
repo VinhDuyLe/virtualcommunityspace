@@ -6,8 +6,6 @@ import dotenv from 'dotenv'
 import eventsRoutes from './routes/eventsRoutes.js'
 import locationsRoutes from './routes/locationsRoutes.js'
 
-// import the router from your routes file
-
 
 dotenv.config()
 

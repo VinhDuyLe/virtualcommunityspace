@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom'; // For dynamic route parameter
-import EventsAPI from '../services/EventsAPI'; // Ensure you have this service
+import { useParams } from 'react-router-dom'; 
+import EventsAPI from '../services/EventsAPI'; 
 import '../css/LocationEvents.css';
 import Event from '../components/Event';
 
 const LocationEvents = () => {
-  const { venueId } = useParams(); // Get the venueId from the URL
+  const { venueId } = useParams(); 
   const [location, setLocation] = useState({});
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    // Fetch the events for the selected venue
+
     const fetchLocationEvents = async () => {
       try {
         const eventsData = await EventsAPI.getEventsByLocation(venueId);
         if (eventsData.length > 0) {
           setLocation({
             name: eventsData[0].location,
-            // You can set image and other details here based on your database structure
+            
             image: '/path/to/default/image.jpg',
           });
           setEvents(eventsData);
