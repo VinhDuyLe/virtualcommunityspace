@@ -4,7 +4,7 @@ Submitted by: Vinh Le
 
 About this web app: Virtual Community Space
 
-Time spent: **48** hours
+Time spent: **72** hours
 
 ## Required Features
 
@@ -31,7 +31,7 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-<img src='hhttps://i.imgur.com/Gceov9P.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/Gceov9P.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with [Kap](https://getkap.co/)
