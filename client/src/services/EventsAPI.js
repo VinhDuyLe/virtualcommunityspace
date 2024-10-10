@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5174/api/events'; // Ensure this is correct
+const API_BASE_URL = '/api/events'; // Ensure this is correct
 
 const EventsAPI = {
   getAllEvents: async () => {
